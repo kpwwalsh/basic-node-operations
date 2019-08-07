@@ -1,0 +1,33 @@
+Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+```
+Sort alphabetizes a file line by line.  The fs read command returns the first letter of the first word of each new line by '\n' and then reorganizes them in a new array via the split and join commands.
+
+wc counts the newlines, bytes and words contained in a file.  That is what was collected in the terminal by way of scanning through the buffer counting end of line(\n)characters.
+
+uniq returns unique lines sorted to check and remove duplicates using split and slice methods.  const commands = require("./commands.js"); was returned.
+
+```
+Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+```
+cat command.js|less to scroll up and down the file.
+
+cat command.js|grep "slice" to return items with the key word "slice".
+
+```
+6)Use split, forEach(), push(), reverse(), and join(), to write a function that reverses 'Hello World'.
+```
+let reverseString=(inputString) =>{
+let splitString=inputString.split("");
+let pushArray=[];
+   splitString.forEach((element) => {
+     pushArray.push(element);
+});
+     pushArray.reverse("");
+let reverseString= pushArray.join("");
+  return reverseString;
+};
+
+reverseString("Hello World");
+
+
+```
